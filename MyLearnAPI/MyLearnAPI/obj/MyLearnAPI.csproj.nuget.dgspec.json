@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HungTG\\source\\repos\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj": {}
+    "C:\\Users\\HungTG\\Desktop\\Workspace\\LearnWebAPINET5\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HungTG\\source\\repos\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj": {
+    "C:\\Users\\HungTG\\Desktop\\Workspace\\LearnWebAPINET5\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HungTG\\source\\repos\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj",
+        "projectUniqueName": "C:\\Users\\HungTG\\Desktop\\Workspace\\LearnWebAPINET5\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj",
         "projectName": "MyLearnAPI",
-        "projectPath": "C:\\Users\\HungTG\\source\\repos\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj",
+        "projectPath": "C:\\Users\\HungTG\\Desktop\\Workspace\\LearnWebAPINET5\\MyLearnAPI\\MyLearnAPI\\MyLearnAPI.csproj",
         "packagesPath": "C:\\Users\\HungTG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HungTG\\source\\repos\\MyLearnAPI\\MyLearnAPI\\obj\\",
+        "outputPath": "C:\\Users\\HungTG\\Desktop\\Workspace\\LearnWebAPINET5\\MyLearnAPI\\MyLearnAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HungTG\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

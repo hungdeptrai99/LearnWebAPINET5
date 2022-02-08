@@ -50,6 +50,7 @@ namespace MyLearnAPI.Controllers
                 Data = hanghoa
             });
         }
+
         [HttpPut("{id}")]
         public IActionResult Edit(string id, HangHoa hangHoaEdit)
         {
