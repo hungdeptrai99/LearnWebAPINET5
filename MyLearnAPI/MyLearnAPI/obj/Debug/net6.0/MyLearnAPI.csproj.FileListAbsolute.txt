@@ -118,3 +118,4 @@ C:\Users\HungTG\Desktop\Workspace\LearnWebAPINET5\MyLearnAPI\MyLearnAPI\obj\Debu
 C:\Users\HungTG\Desktop\Workspace\LearnWebAPINET5\MyLearnAPI\MyLearnAPI\obj\Debug\net6.0\ref\MyLearnAPI.dll
 C:\Users\HungTG\Desktop\Workspace\LearnWebAPINET5\MyLearnAPI\MyLearnAPI\obj\Debug\net6.0\MyLearnAPI.pdb
 C:\Users\HungTG\Desktop\Workspace\LearnWebAPINET5\MyLearnAPI\MyLearnAPI\obj\Debug\net6.0\MyLearnAPI.genruntimeconfig.cache
+C:\Users\HungTG\Desktop\Workspace\LearnWebAPINET5\MyLearnAPI\MyLearnAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

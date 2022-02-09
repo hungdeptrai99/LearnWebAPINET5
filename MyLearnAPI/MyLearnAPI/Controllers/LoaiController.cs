@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyLearnAPI.Data;
 using MyLearnAPI.Models;
@@ -18,23 +19,32 @@ namespace MyLearnAPI.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var dsLoai = _context.Loais.ToList();
-            return Ok(dsLoai);
-        } 
-        
+            try
+            {
+                var dsLoai = _context.Loais.ToList();
+                return Ok(dsLoai);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
             var loai = _context.Loais.SingleOrDefault(loai => loai.MaLoai == id);
-            if(loai != null)
+            if (loai != null)
             {
-            return Ok(loai);
+                return Ok(loai);
             }
-            else {
+            else
+            {
                 return NotFound();
             }
         }
         [HttpPost]
+        [Authorize]
         public IActionResult CreateNew(LoaiModel model)
         {
             try
@@ -45,16 +55,16 @@ namespace MyLearnAPI.Controllers
                 };
                 _context.Add(loai);
                 _context.SaveChanges();
-                return Ok(loai);
+                return StatusCode(StatusCodes.Status201Created, loai);
             }
             catch
             {
                 return BadRequest();
-            }        
+            }
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateLoaiById(int id,LoaiModel model)
+        public IActionResult UpdateLoaiById(int id, LoaiModel model)
         {
             var loai = _context.Loais.SingleOrDefault(loai => loai.MaLoai == id);
             if (loai != null)
@@ -62,6 +72,21 @@ namespace MyLearnAPI.Controllers
                 loai.TenLoai = model.TenLoai;
                 _context.SaveChanges();
                 return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteById(int id)
+        {
+            var loai = _context.Loais.SingleOrDefault(loai => loai.MaLoai == id);
+            if (loai != null)
+            {
+                _context.Remove(loai);
+                _context.SaveChanges(); // Để lưu trong database
+                return Ok(loai);
             }
             else
             {
